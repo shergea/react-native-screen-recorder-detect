@@ -18,4 +18,3 @@ const screenRecorderDetectModule = {
 };
 var _default = screenRecorderDetectModule;
 exports.default = _default;
-

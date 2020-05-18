@@ -79,12 +79,14 @@ NSString *kScreenRecordingDetectorRecordingStatusChangedNotification = @"kScreen
 
 RCT_EXPORT_MODULE()
 
-RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(get) {
-  if ([[ScreenRecordingDetector sharedInstance] isRecording]) {
-    return true;
-  } else {
-    return false;
-  }
+RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(
+  get
+) {
+    if ([[ScreenRecordingDetector sharedInstance] isRecording]) {
+        return @"true";
+    } else {
+        return @"false";
+    }
 }
 
 @end
